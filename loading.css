@@ -13,6 +13,15 @@ body {
     z-index: -1;
 }
 
+.fas {
+    color:#fff;
+    font-size: 200px;
+    position:absolute;
+    top:20%;
+    left:44%;
+    
+}
+
 .mas {
     color:#e5c567;
     font-family: 'Dancing Script', cursive;
@@ -20,7 +29,7 @@ body {
     font-weight: 1000;
     padding:50px;
     position: absolute;
-    top:35%;
+    top:40%;
     left:36.3%;
     animation:blink 2s ease-in-out infinite alternate;
 }
@@ -34,19 +43,19 @@ body {
 
 
 .loading {
-    border: 2px solid #fff;
+    border: 5px solid #fff;
     border-radius: 5px;
     width:500px;
-    height:15px;
+    height:30px;
     margin:auto;
     position: absolute;
-    top:50%;
+    top:55%;
     left:37%;
 }
 
 .loadingbar {
-    background-color: #fff;
-    height:11px;
+    background-color: #e5c567;
+    height:21px;
     width:0;
     animation : progressbar 5s linear;
     animation-iteration-count : 3;
