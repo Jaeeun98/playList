@@ -1,0 +1,54 @@
+
+body {
+    background-image: url("img/background.jpg");
+    text-align: center;
+}
+
+.background {
+    background-color: #750f0b;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    opacity: 90%;
+    z-index: -1;
+}
+
+.mas {
+    color:#e5c567;
+    font-size:50px;
+    font-weight: 1000;
+    padding:50px;
+    position: absolute;
+    top:35%;
+    left:36.3%;
+}
+.loading {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width:500px;
+    height:15px;
+    margin:auto;
+    position: absolute;
+    top:50%;
+    left:37%;
+}
+
+.loadingbar {
+    background-color: #fff;
+    height:11px;
+    width:0;
+    animation : progressbar 5s linear;
+    animation-iteration-count : 3;
+    animation-fill-mode : forwards;
+
+}
+
+@keyframes progressbar {
+    0% {
+        
+    }
+
+    100% {
+     width: 100%;   
+    }
+}
