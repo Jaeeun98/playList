@@ -1,14 +1,13 @@
 const loadingBtn = document.querySelector('.btnDiv');
-const popBox = document.querySelector('.pop');
+const loadingHeight = document.querySelector('.loadingBox').offsetHeight;
 
-/*
+// btn click, move main
 function moveMain (){
-    let popHeight = popBox.innerHeight;
+    window.scrollBy({top : loadingHeight, behavior: 'smooth'});
+    console.log(loadingHeight);
 }
 
 loadingBtn.addEventListener('click', moveMain);
-console.log(popHeight);
-*/
 
 //play
 const playBtn = document.querySelector('.playBtn');
