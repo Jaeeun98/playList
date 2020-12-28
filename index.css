@@ -107,6 +107,7 @@ nav ul li:hover {
     animation:blink 2s ease infinite alternate;
 }
 
+/*article*/
 .articleDiv {
     width:100%;
 }
@@ -125,14 +126,13 @@ article {
 
 h2 {
     width:80%;
-    margin-top:400px;
-    margin-left:27%;
+    margin-top:560px;
+    margin-left:40%;
     color:#fff;
-    font-size: 120px;
+    font-size: 110px;
     font-weight: 800;
     text-align: left;
     letter-spacing: 5px;
-    transition: 2s;
 }
 
 .album {
@@ -140,10 +140,9 @@ h2 {
     width:50%;
     margin-top:20px;
     flex-wrap: wrap;
-    justify-content: center;
-    display: none;
+    display: flex;
     opacity: 0;
-    transition: 2s;
+    padding-bottom: 50px;
 }
 
 .albumImg {
@@ -152,31 +151,30 @@ h2 {
 }
 
 .album img {
-    width: 250px;
-    height: 250px;
-    box-shadow: 7px 10px 10px #000000;
+    width: 220px;
+    height: 220px;
+    box-shadow: 7px 7px 10px #000000;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .album img:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.02, 1.02);
 }
 
 
 .mariah {
-    margin-left:45px;
+    margin-left:140px;
     margin-top:200px;
 }
 .kelly {
-    margin-right: 85px;
-    margin-top:170px;
+    margin-right:130px;
+    margin-top:200px;
 }
 .sia {
-    margin-top:20px;
-    margin-left:85px;
+    margin-left:140px;
 }
 .ariana {
-    margin-right: 40px;
+    margin-right:130px;
 }
 
