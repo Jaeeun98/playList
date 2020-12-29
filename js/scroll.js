@@ -4,22 +4,22 @@ const loadingHeight = document.querySelector('.loadingBox').offsetHeight;
 // btn click, move main
 function moveMain (){
     window.scrollBy({top : loadingHeight, behavior: 'smooth'});
-    console.log(loadingHeight);
+    //scroll, offsetTop(width, height, 좌표구하기 정리)
 }
 
 loadingBtn.addEventListener('click', moveMain);
 
 //play
-//play
-const playBtn = document.querySelector('.playBtn');
-const nav = document.querySelector('nav');
-const album = document.querySelector('.album');
-const navLi = document.querySelectorAll('nav > ul li');
+const popBtn = document.querySelector('.popBtn');
+const popNav = document.querySelector('.popNav');
+const popAlbum = document.querySelector('.popAlbum');
+const popAlbumImg = document.querySelectorAll('.popAlbumImg');
+const popNavLi = document.querySelectorAll('.popNav ul li');
 let toggle = false;
 
 function movePlayBtn(){
     if(!toggle){
-        nav.animate(
+        popNav.animate(
             [{
                 transform : 'translate(-750px, -350px)',
             }],
@@ -27,7 +27,7 @@ function movePlayBtn(){
                 easing : 'ease',
                 fill : 'forwards'
             })    
-        playBtn.animate(
+            popBtn.animate(
             [{
                 width : '60px',
                 height : '60px'
@@ -44,8 +44,8 @@ function movePlayBtn(){
 }
 
 function albumDisplay (){
-    album.style.display = 'flex';
-    album.animate(
+    popAlbum.style.display = 'flex';
+    popAlbum.animate(
         //keyframes
         [{opacity : 1}],
         //options
@@ -54,14 +54,16 @@ function albumDisplay (){
             easing : 'linear',
             fill : 'forwards'
         })
-        album.style.cursor = 'pointer';
+    for(let i=0; i<popAlbumImg.length; i++){
+        popAlbumImg[i].style.cursor = 'pointer';
+    }        
     toggle = true;    
 }
-console.log(navLi.length)
+
 function navView (){
-    for(let i=0; i<navLi.length; i++){
-        navLi[i].style.opacity = 1;
-        navLi[i].animate(
+    for(let i=0; i<popNavLi.length; i++){
+        popNavLi[i].style.opacity = 1;
+        popNavLi[i].animate(
             [{
                 transform : 'translateX(' + (70+(i*50))  + 'px) rotate(360deg)'
             }],
@@ -70,7 +72,33 @@ function navView (){
                 easing : 'linear',
                 fill : 'forwards'
             })
-    }  
+    }
 }
 
-playBtn.addEventListener('click', movePlayBtn);
+popBtn.addEventListener('click', movePlayBtn);
+
+
+
+
+
+/*
+
+loadingBtn.addEventListener('click', moveMain);
+
+function scrollMove(){ 
+    window.
+}
+
+window.addEventListener('scroll', scrollMove);
+
+
+const navLi = document.querySelectorAll('nav > ul li');
+
+
+
+for(let i=0; i<navLi.length; i++){
+    navLi[i].addEventListener('click', function(){
+        navLi[i]
+    });
+}
+*/
