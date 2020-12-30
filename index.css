@@ -20,14 +20,14 @@ body {
 
 .fa-gifts {
     color:#fff;
-    font-size: 150px;
+    font-size: 8vmax;
     text-shadow: 0 0 3px #fff;
 }
 
 .xmasText {
     color:#e5c567;
     font-family: 'Dancing Script', cursive;
-    font-size:50px;
+    font-size:3vmax;
     font-weight: 700;
     padding:10px;
     animation:blink 2s ease-in-out infinite alternate;
@@ -51,7 +51,7 @@ button {
     border:1px solid #fff;
     color:#fff;
     line-height: 2;
-    transition: background 2s;
+    transition: 2s;
     cursor: pointer;
 }
 
@@ -97,12 +97,12 @@ h2 {
     padding-bottom: 10px;
 }
 
-.kpopNav {
+.kpop nav {
     margin-top:50px;
     margin-left:150px;
 }
 
-.kpopH2 {
+.kpop h2 {
     padding:100px;
     margin-left:50px;
 }
@@ -119,12 +119,12 @@ h3, .kpopPlayList {
 }
 
 .kpopAlbumImg {
-    width:500px;
-    height:500px;
+    width:26vmax;
+    height:26vmax;
     border-radius:50%;
     position: absolute;
     border:2px solid #000;
-    top:150px;
+    top:15%;
     right:15%;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -132,8 +132,8 @@ h3, .kpopPlayList {
 }
 
 .circle {
-    width: 100px;
-    height:100px;
+    width: 5vw;
+    height:5vw;
     border-radius: 50%;
     background:#000;
     border:2px solid #000;
@@ -141,26 +141,25 @@ h3, .kpopPlayList {
     margin-top: 43%;
 }
 
-.fa-forward, .fa-step-forward {
+.kpopPlayBtn {
+    position:absolute;
+    bottom:22%;
+    right:25%;
+}
+
+.kpopPlayBtn i {
+    padding:7px;
     color:#fff;
     text-shadow: 0 0 3px #fff;
-    font-size:20px;
-    position:absolute;
-    bottom:200px;
+    font-size:23px;
     cursor: pointer;
 }
 
-
-.prev {
-    transform: rotateY(180deg);
-    right:30.5%;
-}
-.fa-step-forward {
-    right:27.5%;
+.kpopPlayBtn .fa-step-forward {
     font-size:25px;
 }
-.next {
-    right:24.5%;
+.prev {
+    transform: rotateY(180deg); 
 }
 
 .exo {
@@ -177,16 +176,16 @@ h3, .kpopPlayList {
 }
 
 /*popnav*/
-.popNav {
+.pop nav {
     display: flex;
     position:absolute;
     top:calc(50% - 35px);
     left:calc(50% - 35px);
 }
-.popNav ul {
+.pop nav ul {
     margin-top:10px;
 }
-.popNav ul li {
+.pop nav ul li {
     position:absolute;
     left:0;
     width:40px;
@@ -200,14 +199,14 @@ h3, .kpopPlayList {
     margin:7px;
     cursor: pointer;
     opacity: 0;
-    transition: background 0.5s;
+    transition:0.5s;
 }
 
-.popNav ul li:hover {
+.pop nav ul li:hover {
     background:#356636;
 }
 
-.popBtn {
+.pop nav button {
     width:70px;
     height:70px;
     background:#356636;
@@ -227,7 +226,7 @@ h3, .kpopPlayList {
     width:45%;
     height:100%;
 }
-.popH2 {
+.pop h2 {
     width:80%;
     margin-top:560px;
     margin-left:40%;
@@ -275,6 +274,83 @@ h3, .kpopPlayList {
     margin-right: 130px;
 }
 
+@media(max-width:1280px){
+    /*main*/
+    button {
+        width:40px;
+        height:40px;
+    }
 
+    /*kpop*/
+    .kpopPlayBtn {
+        bottom:18%;
+        right:23%;
+    }
+    h3, .kpopPlayList {
+        display: none;
+    }
+}
+
+@media(max-width:1000px) {
+    /*main*/
+    .kpop h2 {
+        padding:50px;
+        font-size:70px;
+    }
+    .kpop nav {
+        margin-left: 100px;
+    }
+    .fa-gifts {
+        font-size:13vmax;
+    }
+    .xmasText {
+        font-size:4vmax;
+    }
+    .kpopAlbumImg {
+        width:40vmax;
+        height:40vmax;
+    }
+    .fa-step-forward {
+        right:38%;
+    }
+    .prev {
+        right:34.5%;
+    }
+    .next {
+        right:31.5%;
+    }
+}
+
+@media(max-width:850px){
+    .kpop h2 {
+        text-align: center;
+        line-height: 1.2;
+    }
+    .kpop nav {
+        margin-left: 100px;
+    }
+    .kpopAlbumImg {
+        top: 40%;
+        left:32%
+    }
+    .kpopPlayBtn {
+        bottom:10%;
+        right:20%;
+    }
+    .kpopPlayBtn i {
+        padding:3px;
+        font-size:18px;
+    }
+}
+
+@media(max-width:500px){
+    .kpopPlayBtn {
+        right:37%;
+    }
+    .kpop nav {
+        margin-top:0;
+        margin-left:50px;
+    }
+}
 
 

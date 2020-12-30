@@ -10,11 +10,11 @@ function moveMain (){
 loadingBtn.addEventListener('click', moveMain);
 
 //play
-const popBtn = document.querySelector('.popBtn');
-const popNav = document.querySelector('.popNav');
+const popBtn = document.querySelector('.pop button');
+const popNav = document.querySelector('.pop nav');
 const popAlbum = document.querySelector('.popAlbum');
 const popAlbumImg = document.querySelectorAll('.popAlbumImg');
-const popNavLi = document.querySelectorAll('.popNav ul li');
+const popNavLi = document.querySelectorAll('.pop nav ul li');
 let toggle = false;
 
 function movePlayBtn(){
