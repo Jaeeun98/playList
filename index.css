@@ -119,8 +119,8 @@ h3, .kpopPlayList {
 }
 
 .kpopAlbumImg {
-    width:26vmax;
-    height:26vmax;
+    width:26vw;
+    height:26vw;
     border-radius:50%;
     position: absolute;
     border:2px solid #000;
@@ -142,9 +142,8 @@ h3, .kpopPlayList {
 }
 
 .kpopPlayBtn {
-    position:absolute;
-    bottom:22%;
-    right:25%;
+    text-align:center;
+    margin-top:50%;
 }
 
 .kpopPlayBtn i {
@@ -156,7 +155,7 @@ h3, .kpopPlayList {
 }
 
 .kpopPlayBtn .fa-step-forward {
-    font-size:25px;
+    font-size:30px;
 }
 .prev {
     transform: rotateY(180deg); 
@@ -307,17 +306,8 @@ h3, .kpopPlayList {
         font-size:4vmax;
     }
     .kpopAlbumImg {
-        width:40vmax;
-        height:40vmax;
-    }
-    .fa-step-forward {
-        right:38%;
-    }
-    .prev {
-        right:34.5%;
-    }
-    .next {
-        right:31.5%;
+        width:40vw;
+        height:40vw;
     }
 }
 
@@ -331,25 +321,33 @@ h3, .kpopPlayList {
     }
     .kpopAlbumImg {
         top: 40%;
-        left:32%
+        left:33%
     }
     .kpopPlayBtn {
-        bottom:10%;
-        right:20%;
+        margin-top:60%;
     }
     .kpopPlayBtn i {
         padding:3px;
-        font-size:18px;
+        font-size:15px;
+    }
+    .kpopPlayBtn .fa-step-forward {
+        font-size: 22px;
     }
 }
 
 @media(max-width:500px){
-    .kpopPlayBtn {
-        right:37%;
+    .kpop h2 {
+        padding:0;
+        padding-top:15%;
+        margin:0;
     }
     .kpop nav {
-        margin-top:0;
         margin-left:50px;
+    }
+    .kpopAlbumImg {
+        width:50vw;
+        height:50vw;
+        left:25%;
     }
 }
 
