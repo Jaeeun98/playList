@@ -9,6 +9,27 @@ function moveMain (){
 
 loadingBtn.addEventListener('click', moveMain);
 
+//kpop playList
+const kBtn = document.querySelectorAll('.kpopPlayBtn i');
+const kPlayList = document.querySelectorAll('.kpopPlayList p');
+const kAlbum = document.querySelectorAll('.kpopAlbum > div');
+let count = 0;
+
+function nextBtn(){
+    count++;
+    for(let i=0; i<kpopPlayList.length;){
+        if(kPlayList[nextCount] != kPlayList[i]) {
+            kPlayList[i].classList.remove('play');
+        } else {
+            kPlayList[count].classList.add('play');
+        }
+    }
+
+    if(count == kPlayList.length-1) {
+        count = -1;
+    }
+}
+
 //play
 const popBtn = document.querySelector('.pop button');
 const popNav = document.querySelector('.pop nav');
