@@ -10,25 +10,40 @@ function moveMain (){
 loadingBtn.addEventListener('click', moveMain);
 
 //kpop playList
+//kpop playList
 const kBtn = document.querySelectorAll('.kpopPlayBtn i');
 const kPlayList = document.querySelectorAll('.kpopPlayList p');
-const kAlbum = document.querySelectorAll('.kpopAlbum > div');
-let count = 0;
+const kAlbum = document.querySelectorAll('.kpopAlbumImg');
+let mCount = 4;
+let pCount = 0;
 
 function nextBtn(){
-    count++;
-    for(let i=0; i<kpopPlayList.length;){
-        if(kPlayList[nextCount] != kPlayList[i]) {
+    pCount++;
+    mCount--;
+    //playList
+    for(let i=0; i<kPlayList.length; i++){
+        if(kPlayList[pCount] != kPlayList[i]) {
             kPlayList[i].classList.remove('play');
         } else {
-            kPlayList[count].classList.add('play');
+            kPlayList[pCount].classList.add('play');
         }
     }
+    if(pCount == kPlayList.length-1){
+        pCount=-1;
+    }
 
-    if(count == kPlayList.length-1) {
-        count = -1;
+    //album
+    kAlbum[mCount].classList.add('AlbumAni');
+
+    if(mCount == 0){
+        mCount=4;
+        for(let i=0; i<kAlbum.length; i++){
+            kAlbum[i].classList.remove('AlbumAni');
+        } 
     }
 }
+
+kBtn[2].addEventListener('click', nextBtn);
 
 //play
 const popBtn = document.querySelector('.pop button');
