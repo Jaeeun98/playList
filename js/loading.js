@@ -1,13 +1,48 @@
 const loadingBtn = document.querySelector('.btnDiv');
-const loadingHeight = document.querySelector('.loadingBox').offsetHeight;
+const loadingBox = document.querySelector('.loadingBox');
+const loadingIcon = document.querySelector('.fas');
+const loadingText = document.querySelector('.xmasText');
+
+window.onload = function(){ 
+    setTimeout(() => {
+        loadingIcon.style.opacity = 0;
+        loadingText.style.opacity = 0;
+    }, 6000);
+};
+
 
 // btn click, move main
 function moveMain (){
-    window.scrollBy({top : loadingHeight, behavior: 'smooth'});
+    window.scrollBy({top : loadingBox.offsetHeight, behavior: 'smooth'});
+    
     //scroll, offsetTop(width, height, 좌표구하기 정리)
 }
 
 loadingBtn.addEventListener('click', moveMain);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //kpop playList
 const kBtn = document.querySelectorAll('.kpopPlayBtn i');
@@ -122,25 +157,3 @@ popBtn.addEventListener('click', movePlayBtn);
 
 
 
-
-/*
-
-loadingBtn.addEventListener('click', moveMain);
-
-function scrollMove(){ 
-    window.
-}
-
-window.addEventListener('scroll', scrollMove);
-
-
-const navLi = document.querySelectorAll('nav > ul li');
-
-
-
-for(let i=0; i<navLi.length; i++){
-    navLi[i].addEventListener('click', function(){
-        navLi[i]
-    });
-}
-*/

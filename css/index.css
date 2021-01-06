@@ -1,0 +1,154 @@
+
+body {
+    background-color: #750f0b;
+    width:100%;
+    height:100vh;
+    text-align: center;
+}
+/*loading*/
+iframe {
+    display: none;
+}
+.loadingBox {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-gifts {
+    color:#fff;
+    font-size: 8vmax;
+    text-shadow: 0 0 3px #fff;
+    transition: opacity 1s;
+}
+
+.xmasText {
+    color:#e5c567;
+    font-family: 'Dancing Script', cursive;
+    font-size:3vmax;
+    font-weight: 700;
+    padding:10px;
+    transition: opacity 1s;
+    animation:blink 1.5s ease infinite alternate;
+}
+
+@keyframes blink {
+    100% {
+        text-shadow: 0 0 5px #fff;
+    }
+}
+
+.btnDiv {
+    padding-top: 70px;
+}
+
+button {
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    background: none;
+    border:1px solid #fff;
+    color:#fff;
+    line-height: 2;
+    cursor: pointer;
+    animation: btnMove 1s ease 5s;
+    animation-fill-mode : forwards;
+}
+
+@keyframes btnMove{
+    50% { transform : translate(0, -550%);}
+    100% {
+            transform : translate(0, -200%);
+            font-size:30px;
+            width: 80px;
+            height:80px;
+            background:#356636;
+        }
+}
+
+/*main*/
+section {
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+/*article*/
+.articleDiv {
+    width:100%;
+}
+
+article {
+    width: 100%;
+    height:100vh;
+}
+
+h2 {    
+    color:#fff;
+    font-size: 110px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+h2:hover {
+    transform:scale(1.2, 1.2);
+}
+
+
+/*kpop*/
+
+.kpop {
+    background:#000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.kpop > img {
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    opacity: 0.1;
+}
+
+.kpop h2 {
+    text-align: center;
+    
+}
+
+/*popnav*/
+.pop {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media(max-width:1280px){
+    button {
+        width:40px;
+        height:40px;
+    }
+
+}
+
+@media(max-width:860px){
+    h2 {
+        font-size:100px;
+    }
+}
+
+@media(max-width:500px){
+
+    h2 {
+        font-size:70px;
+    }
+}

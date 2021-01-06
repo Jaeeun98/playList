@@ -5,59 +5,6 @@ body {
     height:100vh;
     text-align: center;
 }
-/*loading*/
-.loadingBox {
-    height:100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.loadingBox div {
-    width:100vh;
-}
-
-.fa-gifts {
-    color:#fff;
-    font-size: 8vmax;
-    text-shadow: 0 0 3px #fff;
-}
-
-.xmasText {
-    color:#e5c567;
-    font-family: 'Dancing Script', cursive;
-    font-size:3vmax;
-    font-weight: 700;
-    padding:10px;
-    animation:blink 2s ease-in-out infinite alternate;
-}
-
-@keyframes blink {
-    100% {
-        text-shadow: 0 0 5px #fff;
-    }
-}
-
-.btnDiv {
-    padding-top: 70px;
-}
-
-button {
-    border-radius: 50%;
-    width:50px;
-    height:50px;
-    background: none;
-    border:1px solid #fff;
-    color:#fff;
-    line-height: 2;
-    transition: 2s;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color:#356636;
-}
 
 /*main*/
 section {
@@ -109,13 +56,18 @@ h2 {
 
 h3, .kpopPlayList {
     margin-left:350px;
-    letter-spacing: 1.5px;
 }
 
 .kpop p {
     color:#fff;
     padding:20px;
     font-size:16px;
+}
+
+.kpopPlayList .play {
+    font-weight: 600;
+    text-shadow: 0 0 2px #fff;
+    transition: 0.5s;
 }
 
 .kpopAlbumImg {
@@ -126,9 +78,18 @@ h3, .kpopPlayList {
     border:2px solid #000;
     top:15%;
     right:15%;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+    background-position: -30px -30px;
+}
+
+/*kpop AlbumAnimation*/
+.AlbumAni {
+    animation : back 3s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes back {
+    50% {opacity: 0;}
+    100% { background : rgb(0, 0, 0, 0) };
 }
 
 .circle {
@@ -141,9 +102,10 @@ h3, .kpopPlayList {
     margin-top: 43%;
 }
 
-.kpopPlayBtn {
+.kpopAlbumImg .kpopPlayBtn {
     text-align:center;
     margin-top:50%;
+    opacity: 1;
 }
 
 .kpopPlayBtn i {
@@ -152,6 +114,12 @@ h3, .kpopPlayList {
     text-shadow: 0 0 3px #fff;
     font-size:23px;
     cursor: pointer;
+    transition: 0.5s ease;
+    opacity: 1;
+}
+
+.kpopPlayBtn i:active {
+    opacity: 0.5;
 }
 
 .kpopPlayBtn .fa-step-forward {
@@ -163,6 +131,8 @@ h3, .kpopPlayList {
 
 .exo {
     background-image: url(img/exo.jpeg);
+    background-size: cover;
+    background-position: 50% 50%;
 }
 .jelly {
     background-image: url(img/jelly.jpg);
@@ -174,113 +144,8 @@ h3, .kpopPlayList {
     background-image: url(img/taeyeon.jpg);
 }
 
-/*popnav*/
-.pop nav {
-    display: flex;
-    position:absolute;
-    top:calc(50% - 35px);
-    left:calc(50% - 35px);
-}
-.pop nav ul {
-    margin-top:10px;
-}
-.pop nav ul li {
-    position:absolute;
-    left:0;
-    width:40px;
-    height:40px;
-    border:2px solid #fff;
-    border-radius: 50%;
-    font-size:15px;
-    font-weight: 700;
-    color:#fff;
-    line-height: 2.3;
-    margin:7px;
-    cursor: pointer;
-    opacity: 0;
-    transition:0.5s;
-}
-
-.pop nav ul li:hover {
-    background:#356636;
-}
-
-.pop nav button {
-    width:70px;
-    height:70px;
-    background:#356636;
-    font-size: 25px;
-    margin-right:10px;
-    z-index: 1;
-    animation:blink 2s ease infinite alternate;
-}
-/*pop*/
-
-.pop {
-    position:relative;
-    display: flex;
-    align-items: center;
-}
-.popText {
-    width:45%;
-    height:100%;
-}
-.pop h2 {
-    width:80%;
-    margin-top:560px;
-    margin-left:40%;
-    text-align: left;
-}
-
-.popAlbum {
-    height:100%;
-    width:50%;
-    flex-wrap: wrap;
-    display: flex;
-    opacity: 0;
-    padding-bottom: 50px;
-}
-
-.popAlbumImg {
-    width:40%;
-    height:450px;
-}
-
-.popAlbum img {
-    width: 220px;
-    height: 220px;
-    box-shadow: 7px 7px 10px #000000;
-    transition: 0.5s;
-}
-
-.popAlbumImg img:hover {
-    transform: scale(1.02, 1.02);
-}
-
-
-.mariah {
-    margin-top:200px;
-    margin-left:140px;
-}
-.kelly {
-    margin-top:200px;
-    margin-right:130px;
-}
-.sia {
-    margin-left:140px;
-}
-.ariana {
-    margin-right: 130px;
-}
-
 @media(max-width:1280px){
-    /*main*/
-    button {
-        width:40px;
-        height:40px;
-    }
 
-    /*kpop*/
     .kpopPlayBtn {
         bottom:18%;
         right:23%;
@@ -291,7 +156,7 @@ h3, .kpopPlayList {
 }
 
 @media(max-width:1000px) {
-    /*main*/
+
     .kpop h2 {
         padding:50px;
         font-size:70px;
