@@ -130,18 +130,18 @@ h3, .kpopPlayList {
 }
 
 .exo {
-    background-image: url(img/exo.jpeg);
+    background-image: url(../img/exo.jpeg);
     background-size: cover;
     background-position: 50% 50%;
 }
 .jelly {
-    background-image: url(img/jelly.jpg);
+    background-image: url(../img/jelly.jpg);
 }
 .beg {
-    background-image: url(img/beg.jpg);
+    background-image: url(../img/beg.jpg);
 }
 .taeyeon {
-    background-image: url(img/taeyeon.jpg);
+    background-image: url(../img/taeyeon.jpg);
 }
 
 @media(max-width:1280px){

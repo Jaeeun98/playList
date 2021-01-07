@@ -1,10 +1,12 @@
-
 body {
     background-color: #750f0b;
     width:100%;
     height:100vh;
     text-align: center;
+    transition: 0.5s ease;
+    overflow: hidden;
 }
+
 /*loading*/
 iframe {
     display: none;
@@ -53,13 +55,29 @@ button {
     color:#fff;
     line-height: 2;
     cursor: pointer;
-    animation: btnMove 1s ease 5s;
+    outline: 0; 
+    opacity: 0;
+    animation: btnMove 1s ease-out 6s;
     animation-fill-mode : forwards;
 }
 
+.btnDiv p {
+    color:#fff;
+    font-size:3vmax;
+    font-weight: 600;
+    opacity: 0;
+    animation: btnPMove 1s ease 7s;
+    animation-fill-mode : forwards;
+    text-shadow: 5px 5px 0 black;
+}
+
 @keyframes btnMove{
-    50% { transform : translate(0, -550%);}
+    50% {
+            opacity: 1; 
+            transform : translate(0, -550%);
+        }
     100% {
+            opacity: 1;
             transform : translate(0, -200%);
             font-size:30px;
             width: 80px;
@@ -68,20 +86,63 @@ button {
         }
 }
 
-/*main*/
-section {
-    position:relative;
-    width:100%;
-    height:100%;
+@keyframes btnPMove {
+    100% {
+        transform : translate(0, -200%);
+        opacity: 1;
+    }
 }
 
-/*article*/
-.articleDiv {
+/*section*/
+section {
     width:100%;
+    height:100%;
+    display:none;
+    position: relative;
+}
+/*nav*/
+nav {
+    position:fixed;
+    right:3%;
+    bottom:-95%;
+}
+
+nav p {
+    color:#fff;
+}
+
+.navKpop {
+    margin-bottom: 30px;
+}
+
+.navKpop div, .navPop div {
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background: #fff;
+    margin:10px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.navPop div:hover {
+    background:#750f0b;
+}
+/*
+.navPop::after {
+    content : "";
+    border:1px solid #fff;
+    margin-left:5px;
+    border-radius: 10px;
+}
+*/
+
+.navKpop div:hover {
+    background:#750f0b;
 }
 
 article {
-    width: 100%;
     height:100vh;
 }
 
@@ -92,37 +153,21 @@ h2 {
     letter-spacing: 5px;
     cursor: pointer;
     transition: 0.3s ease;
-}
+    text-shadow: 8px 5px 5px #222;
 
-h2:hover {
-    transform:scale(1.2, 1.2);
 }
 
 
 /*kpop*/
-
 .kpop {
-    background:#000;
+    background:#356638;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 
-.kpop > img {
-    position:absolute;
-    width:100%;
-    height:100%;
-
-    opacity: 0.1;
-}
-
-.kpop h2 {
-    text-align: center;
-    
-}
-
-/*popnav*/
+/*pop*/
 .pop {
     width:100%;
     height:100%;
@@ -137,7 +182,6 @@ h2:hover {
         width:40px;
         height:40px;
     }
-
 }
 
 @media(max-width:860px){
@@ -147,7 +191,6 @@ h2:hover {
 }
 
 @media(max-width:500px){
-
     h2 {
         font-size:70px;
     }
