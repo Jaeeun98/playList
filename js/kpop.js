@@ -1,3 +1,6 @@
+
+
+/*
 const kBtn = document.querySelectorAll('.kpopPlayBtn i');
 const kPlayList = document.querySelectorAll('.kpopPlayList p');
 const kAlbum = document.querySelectorAll('.kpopAlbumImg');
@@ -30,12 +33,8 @@ function nextBtn(){
     }
 }
 
-function prevBtn(){
-    
-}
-
-
 kBtn[1].addEventListener('click', prevBtn);
 kBtn[2].addEventListener('click', nextBtn);
 
 
+*/

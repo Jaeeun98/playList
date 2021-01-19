@@ -125,14 +125,6 @@ nav p {
 .navPop div:hover {
     background:#750f0b;
 }
-/*
-.navPop::after {
-    content : "";
-    border:1px solid #fff;
-    margin-left:5px;
-    border-radius: 10px;
-}
-*/
 
 .navKpop div:hover {
     background:#750f0b;
@@ -155,23 +147,30 @@ h2 {
 
 
 /*kpop*/
-.kpop {
-    background:#356638;
+.kpop, .pop {
     display: flex;
+    width:200%;
+    height:100%;
     align-items: center;
     justify-content: center;
+    transition: 0.5s ease;
+}
+.kpop {
+    background:#000;
+}
+.kpop > div, .pop > div {
+    width: 100%;
 }
 
 
 /*pop*/
 .pop {
-    width:100%;
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position:relative;
 }
 
+.popNav {
+    bottom : -195%;
+}
 
 @media(max-width:1280px){
     button {

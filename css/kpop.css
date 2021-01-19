@@ -1,41 +1,22 @@
-
-body {
-    background-color: #750f0b;
-    width:100%;
-    height:100vh;
-    text-align: center;
-}
-
-/*main*/
-section {
-    position:relative;
-    width:100%;
+.kpopMain {
+    display: flex;
+    text-align: left;
     height:100%;
 }
+.video {
+    height:50%;
+}
+.playList {
+    height: 50%;
+}
 
-/*article*/
-.articleDiv {
+.ytb {
     width:100%;
 }
 
-article {
-    width: 100%;
-    height:100vh;
-}
-
-h2 {    
-    color:#fff;
-    font-size: 110px;
-    font-weight: 800;
-    letter-spacing: 5px;
-}
-
-/*kpop*/
-
-.kpop {
-    background:#000;
-    position: relative;
-    text-align: left;
+.kpopMain h2 {
+    padding:5%;
+    margin-left:50px;
 }
 
 .kpop h3 {
@@ -44,21 +25,11 @@ h2 {
     padding-bottom: 10px;
 }
 
-.kpop nav {
-    margin-top:50px;
-    margin-left:150px;
-}
-
-.kpop h2 {
-    padding:100px;
-    margin-left:50px;
-}
-
 h3, .kpopPlayList {
     margin-left:350px;
 }
 
-.kpop p {
+.kpopMain p {
     color:#fff;
     padding:20px;
     font-size:16px;
@@ -68,6 +39,9 @@ h3, .kpopPlayList {
     font-weight: 600;
     text-shadow: 0 0 2px #fff;
     transition: 0.5s;
+}
+.kpopAlbum {
+    display:none;
 }
 
 .kpopAlbumImg {
@@ -145,7 +119,6 @@ h3, .kpopPlayList {
 }
 
 @media(max-width:1280px){
-
     .kpopPlayBtn {
         bottom:18%;
         right:23%;
@@ -157,18 +130,12 @@ h3, .kpopPlayList {
 
 @media(max-width:1000px) {
 
-    .kpop h2 {
+    .kpopMain h2 {
         padding:50px;
         font-size:70px;
     }
-    .kpop nav {
-        margin-left: 100px;
-    }
     .fa-gifts {
         font-size:13vmax;
-    }
-    .xmasText {
-        font-size:4vmax;
     }
     .kpopAlbumImg {
         width:40vw;
@@ -177,12 +144,9 @@ h3, .kpopPlayList {
 }
 
 @media(max-width:850px){
-    .kpop h2 {
+    .kpopMain h2 {
         text-align: center;
         line-height: 1.2;
-    }
-    .kpop nav {
-        margin-left: 100px;
     }
     .kpopAlbumImg {
         top: 40%;
@@ -201,13 +165,10 @@ h3, .kpopPlayList {
 }
 
 @media(max-width:500px){
-    .kpop h2 {
+    .kpopMain h2 {
         padding:0;
         padding-top:15%;
         margin:0;
-    }
-    .kpop nav {
-        margin-left:50px;
     }
     .kpopAlbumImg {
         width:50vw;

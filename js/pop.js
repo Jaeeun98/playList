@@ -1,3 +1,5 @@
+
+/*
 const popBtn = document.querySelector('.pop button');
 const popNav = document.querySelector('.pop nav');
 const popAlbum = document.querySelector('.popAlbum');
@@ -64,3 +66,5 @@ function navView (){
 }
 
 popBtn.addEventListener('click', movePlayBtn);
+
+*/
