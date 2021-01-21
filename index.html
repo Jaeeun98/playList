@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/pop.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script src="https://apis.google.com/js/api.js"></script>
+    <script defer src="https://www.youtube.com/iframe_api"></script>
+    <script defer src="https://www.youtube.com/player_api"></script>
     <script defer src="https://kit.fontawesome.com/a93dcadf53.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
     <script defer src="js/snow.js"></script>
@@ -16,6 +18,7 @@
     <script defer src="js/kpop.js"></script>
     <script defer src="js/pop.js"></script>
     <script defer src="js/playListAPI.js"></script>
+    
     <title>Christmas PlayList</title>
 </head>
 <body>
@@ -49,8 +52,10 @@
             <div class="kpopMain">
                 <h2>KPOP<br>PLAYLIST</h2>
                 <div class="ytb">
-                    <div class="video"></div>
-                    <div class="playList"></div>
+                    <div id="player"></div>
+                    <div class="playList">
+                        <ul class="playListUl"></ul>
+                    </div>
                 </div>
                 
 

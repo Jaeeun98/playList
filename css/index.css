@@ -8,9 +8,6 @@ body {
 }
 
 /*loading*/
-iframe {
-    display: none;
-}
 .loadingBox {
     height:100vh;
     display: flex;
@@ -218,3 +215,12 @@ h2 {
 }
 
 /*360*/
+
+
+ul {
+    color:#fff;
+}
+
+ul li {
+    display: flex;
+}
