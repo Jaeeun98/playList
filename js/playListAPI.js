@@ -17,6 +17,10 @@ function showPlayListItem(data){
     const output = `
         <div class="num">${num}</div>
         <div class="title">${title}</div>
+        <div class="playBtn">
+          <div class="play">&#9654</div>
+          <div class="stop">&#9632</div>
+        </div>
     `
     list.innerHTML = output;
     playListUl.appendChild(list);
@@ -28,38 +32,30 @@ function showPlayListItem(data){
 }
 
 let player;
-
 function showVideo(){
-  const list = document.querySelectorAll('.playListUl > li');
-  const videoId = list[0].className;
   player = new YT.Player('player', {
     height:'400',
-    width:'80%',
-    videoId : videoId,
+    width:'90%',
     playerVars:{
       'modestbranding' : 1,
-      'autoplay' : 0,
+      'list' : itemId,
+      'listType' : "playlist",
+      'autoplay' : 1,
       'controls' : 1,
-      'showinfo' : 1,
       'rel' : 0,
-      'loop' : 0,
-      'playList' : itemId
+      'loop' : 1,
     },
     events: {
-      'onReady' : onPlayerReady,
-      'onStateChange' : onPlayerStateChange
+      'onReady' : load,
     }
   })
 }
 
-function onPlayerReady(event){
-  event.target.playVideo();
+function load(e){
+  e.target.loadPlaylist(itemId, 0);
 }
 
-function onPlayerStateChange(){
-  if(player.getPlayerState() == 1) console.log("재생중");
-  else if(player.getPlayerState() == 2) console.log("일시중지");
-}
+
 
 
 /*

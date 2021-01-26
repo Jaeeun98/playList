@@ -6,37 +6,22 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/kpop.css">
-    <link rel="stylesheet" href="css/pop.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script src="https://apis.google.com/js/api.js"></script>
-    <script defer src="https://www.youtube.com/iframe_api"></script>
-    <script defer src="https://www.youtube.com/player_api"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://www.youtube.com/player_api"></script>
     <script defer src="https://kit.fontawesome.com/a93dcadf53.js" crossorigin="anonymous"></script>
-    <script defer src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-    <script defer src="js/snow.js"></script>
     <script defer src="js/index.js"></script>
-    <script defer src="js/kpop.js"></script>
-    <script defer src="js/pop.js"></script>
     <script defer src="js/playListAPI.js"></script>
-    
     <title>Christmas PlayList</title>
 </head>
 <body>
     <div class="loadingBox">
-        <div class="iconDiv">
-            <i class="fas fa-gifts"></i>
-        </div>
-        <div class="pDiv">
-            <p class="xmasText">Christmas Loading</p>
-        </div>
-        <div class="btnDiv">
-            <button>&#9654;</button>
-            <p>CLICK!</p>
-        </div>
+        <p class="xmasText">PlayList Loading</p>
     </div>
     <section>
         <article class="kpop">
-            <div>
+            <div class="kpopText">
                 <h2>KPOP<br>PLAYLIST</h2>
                 <nav class="kpopNav">
                     <div class="navKpop">
@@ -50,33 +35,14 @@
                 </nav>
             </div>
             <div class="kpopMain">
-                <h2>KPOP<br>PLAYLIST</h2>
-                <div class="ytb">
-                    <div id="player"></div>
+                <div class="kpopText">
+                    <h2>KPOP<br>PLAYLIST<span><i class="fas fa-random"></i></span></h2>
                     <div class="playList">
                         <ul class="playListUl"></ul>
                     </div>
                 </div>
-                
-
-                <div class="kpopAlbum">
-                    <div class="jelly kpopAlbumImg">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="beg kpopAlbumImg">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="exo kpopAlbumImg">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="taeyeon kpopAlbumImg">
-                        <div class="circle"></div>
-                    </div>  
-                    <div class="kpopPlayBtn">
-                        <i class="fas fa-step-forward"></i>
-                        <i class="fas fa-forward prev"></i>
-                        <i class="fas fa-forward next"></i>
-                    </div>
+                <div class="ytb">
+                    <div id="player"></div>
                 </div>
             </div>
         </article>

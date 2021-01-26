@@ -1,4 +1,3 @@
-const loadingBtn = document.querySelector('.btnDiv');
 const loadingBox = document.querySelector('.loadingBox');
 const loadingIcon = document.querySelector('.fas');
 const loadingText = document.querySelector('.xmasText');
@@ -14,23 +13,23 @@ const popSubBtn = document.querySelector('.pop > div > h2');
 //loading icon 
 window.onload = function(){ 
     setTimeout(() => {
-        loadingIcon.style.opacity = 0;
         loadingText.style.opacity = 0;
     }, 5000);
+    setTimeout(() => {
+        section.style.display = "block";
+        body.style.transform = "translateY(-100%)";
+    }, 6000);
 };
 
-//btn move
-function kpopMove(){
-    section.style.display = "block";
-    body.style.transform = "translateY(-100%)";
-}
-loadingBtn.addEventListener('click', kpopMove);
 
 //nav scroll
 kpopBtn.addEventListener('click', function(){
     body.style.transform = "translateY(-200%)";
 })
-popBtn.addEventListener('click', kpopMove);
+
+popBtn.addEventListener('click', function(){
+    body.style.transform = "translateY(-100%)";
+});
 
 //sub scroll
 kpopSubBtn.addEventListener('click', function(){

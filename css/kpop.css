@@ -2,166 +2,80 @@
     display: flex;
     text-align: left;
     height:100%;
-}
-.video {
-    height:50%;
-}
-.playList {
-    height: 50%;
-}
-
-.ytb {
-    width:100%;
+    background:#000;
 }
 
 .kpopMain h2 {
     padding:5%;
     margin-left:50px;
+    cursor: default;;
 }
 
-.kpop h3 {
-    color:#fff;
-    font-size:30px;
-    padding-bottom: 10px;
-}
-
-h3, .kpopPlayList {
-    margin-left:350px;
-}
-
-.kpopMain p {
-    color:#fff;
-    padding:20px;
-    font-size:16px;
-}
-
-.kpopPlayList .play {
-    font-weight: 600;
-    text-shadow: 0 0 2px #fff;
-    transition: 0.5s;
-}
-.kpopAlbum {
-    display:none;
-}
-
-.kpopAlbumImg {
-    width:26vw;
-    height:26vw;
-    border-radius:50%;
-    position: absolute;
-    border:2px solid #000;
-    top:15%;
-    right:15%;
-    background-position: -30px -30px;
-}
-
-/*kpop AlbumAnimation*/
-.AlbumAni {
-    animation : back 3s ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes back {
-    50% {opacity: 0;}
-    100% { background : rgb(0, 0, 0, 0) };
-}
-
-.circle {
-    width: 5vw;
-    height:5vw;
-    border-radius: 50%;
-    background:#000;
-    border:2px solid #000;
-    margin:auto;
-    margin-top: 43%;
-}
-
-.kpopAlbumImg .kpopPlayBtn {
-    text-align:center;
-    margin-top:50%;
-    opacity: 1;
-}
-
-.kpopPlayBtn i {
-    padding:7px;
-    color:#fff;
-    text-shadow: 0 0 3px #fff;
-    font-size:23px;
+.kpopMain h2 .fas {
+    margin-left:60px;
+    font-size:20px;
     cursor: pointer;
-    transition: 0.5s ease;
-    opacity: 1;
 }
 
-.kpopPlayBtn i:active {
-    opacity: 0.5;
+.kpopMain .kpopText {
+    width:40%;
 }
 
-.kpopPlayBtn .fa-step-forward {
-    font-size:30px;
+/*video*/
+.ytb {
+    width:60%;
+    padding:4% 0;
 }
-.prev {
-    transform: rotateY(180deg); 
+#player {
+    height:100%;
 }
-
-.exo {
-    background-image: url(../img/exo.jpeg);
-    background-size: cover;
-    background-position: 50% 50%;
-}
-.jelly {
-    background-image: url(../img/jelly.jpg);
-}
-.beg {
-    background-image: url(../img/beg.jpg);
-}
-.taeyeon {
-    background-image: url(../img/taeyeon.jpg);
+.playList {
+    height: 60%;
+    background-attachment: local;
+    width: 80%;
+    background:rgb(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin:0 12.5%;
 }
 
-@media(max-width:1280px){
-    .kpopPlayBtn {
-        bottom:18%;
-        right:23%;
-    }
-    h3, .kpopPlayList {
-        display: none;
-    }
+ul {
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+    background-attachment:local;
+}
+
+ul li {
+    padding:20px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+ul li:hover {
+    background:rgb(255, 255, 255, 0.5);
+}
+ul li div {
+    padding:0 10px;
+}
+.playBtn {
+    display:inherit;
+    position: absolute;
+    right:0;
 }
 
 @media(max-width:1000px) {
-
     .kpopMain h2 {
         padding:50px;
         font-size:70px;
     }
-    .fa-gifts {
-        font-size:13vmax;
-    }
-    .kpopAlbumImg {
-        width:40vw;
-        height:40vw;
-    }
-}
-
+}    
+    
 @media(max-width:850px){
     .kpopMain h2 {
         text-align: center;
         line-height: 1.2;
     }
-    .kpopAlbumImg {
-        top: 40%;
-        left:33%
-    }
-    .kpopPlayBtn {
-        margin-top:60%;
-    }
-    .kpopPlayBtn i {
-        padding:3px;
-        font-size:15px;
-    }
-    .kpopPlayBtn .fa-step-forward {
-        font-size: 22px;
-    }
+   
 }
 
 @media(max-width:500px){
@@ -170,11 +84,7 @@ h3, .kpopPlayList {
         padding-top:15%;
         margin:0;
     }
-    .kpopAlbumImg {
-        width:50vw;
-        height:50vw;
-        left:25%;
-    }
+
 }
 
 
