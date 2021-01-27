@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/kpop.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="https://www.youtube.com/player_api"></script>
     <script defer src="https://kit.fontawesome.com/a93dcadf53.js" crossorigin="anonymous"></script>
     <script defer src="js/index.js"></script>
     <script defer src="js/playListAPI.js"></script>
@@ -34,8 +33,8 @@
                     </div>
                 </nav>
             </div>
-            <div class="kpopMain">
-                <div class="kpopText">
+            <div class="kpopMain main">
+                <div class="kpopText text">
                     <h2>KPOP<br>PLAYLIST<span><i class="fas fa-random"></i></span></h2>
                     <div class="playList">
                         <ul class="playListUl"></ul>
@@ -60,22 +59,17 @@
                     </div>
                 </nav>
             </div>
-            <div class="popMain">
-                <h2>POP<br>PLAY LIST</h2>
-                <div class="popAlbum">
-                    <div class="popAlbumImg">
-                        <img class="mariah" src="img/mariah.jpg" alt="mariah album cover">
+            <div class="popMain main">
+                <div class="popText text">
+                    <h2>POP<br>PLAYLIST<span><i class="fas fa-random"></i></span></h2>
+                    <div class="playList">
+                        <ul class="playListUl"></ul>
                     </div>
-                    <div class="popAlbumImg">
-                        <img class="kelly" src="img/kelly.jpg" alt="kelly album cover">
-                    </div>
-                    <div class="popAlbumImg">
-                        <img class="sia" src="img/sia.jpg" alt="sia album cover">
-                    </div>
-                    <div class="popAlbumImg">
-                        <img class="ariana" src="img/ariana.jpg" alt="ariana album cover">
-                    </div>  
                 </div>
+                <div class="ytb">
+                    <div id="player"></div>
+                </div>
+                
             </div>
         </article>      
     </section>
