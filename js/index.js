@@ -3,12 +3,15 @@ const loadingIcon = document.querySelector('.fas');
 const loadingText = document.querySelector('.xmasText');
 const body = document.querySelector('body');
 const section = document.querySelector('section');
-const kpopBtn = document.querySelector('.kNavPop');
-const popBtn = document.querySelector('.pNavPop');
+const popBtn = document.querySelector('.kNavPop');
+const kpopBtn = document.querySelector('.pNavPop');
 const kpop = document.querySelector('.kpop');
 const kpopSubBtn = document.querySelector('.kpop > div > h2');
 const pop = document.querySelector('.pop');
 const popSubBtn = document.querySelector('.pop > div > h2');
+const back = document.querySelectorAll('.back');
+const mainNavKpop = document.querySelector('.mainNavKpop');
+const mainNavPop = document.querySelector('.mainNavPop');
 
 //loading icon 
 window.onload = function(){ 
@@ -22,26 +25,25 @@ window.onload = function(){
 };
 
 
-//nav scroll
-kpopBtn.addEventListener('click', function(){
-    body.style.transform = "translateY(-200%)";
-})
+//nav
+const kpopMove = () => body.style.transform = "translateY(-100%)";
+const popMove = () => body.style.transform = "translateY(-200%)"
+const kpopMainMove = () => body.style.transform = "translate(-100%, -100%)";
+const popMainMove = () => body.style.transform = "translate(-100%, -200%)";
 
-popBtn.addEventListener('click', function(){
-    body.style.transform = "translateY(-100%)";
-});
+//index nav
+kpopBtn.addEventListener('click', kpopMove);
+popBtn.addEventListener('click', popMove);
 
-//sub scroll
-kpopSubBtn.addEventListener('click', function(){
-    kpop.style.transform = "translateX(-50%)"
-});
-popSubBtn.addEventListener('click', function(){
-    pop.style.transform = "translateX(-50%)"
-});
+//index to main scroll
+kpopSubBtn.addEventListener('click', kpopMainMove);
+popSubBtn.addEventListener('click', popMainMove);
 
-
-
-
+//main nav
+back[0].addEventListener('click', kpopMove);
+back[1].addEventListener('click', popMove);
+mainNavKpop.addEventListener('click', kpopMainMove);
+mainNavPop.addEventListener('click', popMainMove);
 
 /*
 
