@@ -96,6 +96,25 @@ function kpopReady(e){
   }
 
 
+  function kpopStateChange(e){
+    //choice list color change 
+    if(e.data == 1){
+      const playId = e.target.playerInfo.videoData.video_id;
+      const list = document.querySelectorAll('.playListUl li');
+  
+      list.forEach(item => {
+        const listId = item.className;
+        if(playId == listId) {
+          item.classList.add('choiceLi');
+        } else {
+          item.classList.remove('choiceLi');
+        }
+      })
+    }
+  }
+
+  
+
 
 
 
