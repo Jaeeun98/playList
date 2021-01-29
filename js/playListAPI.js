@@ -42,8 +42,6 @@ function showVideo(){
   
 }
 
-
-
 //load 중에 함수 호출하면 오류뜸, 준비중일때 세팅
 //kpopReady
 function kpopReady(e){
@@ -84,7 +82,18 @@ function kpopReady(e){
         playListUl.appendChild(list);
       })
     })
+    .then(() => {
+      //stop
+      const stopBtn = document.querySelectorAll('.stop');
+      stopBtn.forEach((item) => item.addEventListener('click', stop))
+      //click play
+      const playBtn = document.querySelectorAll('.play');
+      playBtn.forEach((item, index) => item.addEventListener('click', () => play(index)))
+    })
 
+    const stop = () => player.pauseVideo();
+    const play = (index) => player.playVideoAt(index);
+  }
 
 
 
