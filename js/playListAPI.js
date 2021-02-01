@@ -6,6 +6,13 @@ const kpopListId = "PLOHoVaTp8R7dfrJW5pumS0iD_dhlXKv17";
 const popListId = "PLOHoVaTp8R7d3L_pjuwIa6nRh4tH5nI4x";
 const ramdomIcon = document.querySelector('.fas');
 
+//api 추가
+
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 //video iframe
 //forIn 사용
 let player;
@@ -17,10 +24,6 @@ function onYouTubeIframeAPIReady(){
       'modestbranding' : 1,
       'list' : kpopListId,
       'listType' : "playlist",
-      'autoplay' : 0,
-      'controls' : 1,
-      'rel' : 0,
-      'loop' : 0
     },
     events: {
       'onReady' : ready,
@@ -34,10 +37,6 @@ function onYouTubeIframeAPIReady(){
       'modestbranding' : 1,
       'list' : popListId,
       'listType' : "playlist",
-      'autoplay' : 0,
-      'controls' : 1,
-      'rel' : 0,
-      'loop' : 0
     },
     events: {
       'onReady' : ready,
@@ -50,7 +49,6 @@ function onYouTubeIframeAPIReady(){
 //load 중에 함수 호출하면 오류뜸, 준비중일때 세팅
 //kpopReady
 function ready(e){
-  console.log();
   //playlist
   const videoIdArr = e.target.getPlaylist();
   const promiseList = videoIdArr.map(getItem);
@@ -152,18 +150,8 @@ function stateChange(e){
       } else {
         item.classList.remove('choiceLi');
       }
-    })
-   
-
-    
-  }
-  
-}
-
-
-//popReady
-function popReady(e){
-  console.log(e.target)
+    }) 
+  }  
 }
 
 
