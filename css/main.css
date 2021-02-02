@@ -57,6 +57,7 @@
 }
 #player, #popPlayer {
     height:100%;
+    width:90%;
 }
 
 .playList {
@@ -97,15 +98,17 @@ ul li {
 ul li:hover {
     background:rgb(255, 255, 255, 0.5);
 }
+.choiceLi {
+    background:rgb(255, 255, 255, 0.5);
+}
 ul li div {
     padding:0 10px;
 }
-.playBtn {
+.playBtn, .popPlayBtn {
     display:inherit;
     position: absolute;
     right:0;
 }
-
 
 /*pop*/
 .popMain {
@@ -123,29 +126,79 @@ ul li div {
     background-color:#444;
 }
 
-
-@media(max-width:1000px) {
-    .kpopMain h2 {
-        padding:50px;
-        font-size:70px;
+@media(max-width:1500px){
+    .ytb {
+        margin-left:10%;
     }
-}    
-    
-@media(max-width:850px){
-    .kpopMain h2 {
-        text-align: center;
-        line-height: 1.2;
+    .playList {
+        width:100%;
     }
-   
 }
 
-@media(max-width:500px){
-    .kpopMain h2 {
-        padding:0;
-        padding-top:15%;
-        margin:0;
+@media(max-width:1200px) {
+    .kpopMain h2, .popMain h2 {
+        font-size:70px;
     }
+    
+}
 
+@media(max-width:1024px) {
+    .mainNav {
+        display:flex;
+        margin:40px;
+    }
+    .mainNav div {
+        margin-left:15px;
+    }
+    .kpopMain h2, .popMain h2 {
+        display:none;
+    }
+    .playList {
+        margin : 35% 0 0 12.5%;
+    }
+    ul {
+        margin-top:55vw;
+    }
+}
+    
+@media(max-width:850px){
+    .main {
+        flex-wrap: wrap;
+    }
+    .text {
+        width:80%;
+    }
+    #player, #popPlayer {
+        width: 100%;
+    }
+    .ytb {
+        margin:0;
+        position: absolute;
+        left:126%;
+        width:50%;
+        height:40%;
+    }
+    .popYtb {
+        left:63%;
+        width:25%;
+        
+    }
+    .playList {
+        height:50vh;
+    }
+    ul {
+
+        height:50vh;
+    }
+    .mainNav {
+        display: inline-block;
+    }
+}
+
+@media(max-width:750px){
+    ul {
+        margin-top:45vw;
+    }
 }
 
 
