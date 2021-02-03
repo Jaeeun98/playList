@@ -1,9 +1,8 @@
-const videoBox = document.querySelector('.video');
-const kpopPlayListUl = document.querySelector('.kpopPlayListUl');
-const popPlayListUl = document.querySelector('.popPlayListUl')
+const kpopPlaylistUl = document.querySelector('.kpopPlayListUl');
+const popPlaylistUl = document.querySelector('.popPlayListUl')
 const key = "AIzaSyBJFWmVhHaFhVmTyg7PQPD9EJolH1AX4Vk";
-const kpopListId = "PLOHoVaTp8R7dfrJW5pumS0iD_dhlXKv17";
-const popListId = "PL2HEDIx6Li8jGsqCiXUq9fzCqpH99qqHV";
+const kpoplistId = "PLOHoVaTp8R7dfrJW5pumS0iD_dhlXKv17";
+const poplistId = "PLD7SPvDoEddZUrho5ynsBfaI7nqhaNN5c";
 //"PLOHoVaTp8R7d3L_pjuwIa6nRh4tH5nI4x";
 //kpop은 재생 가능, pop은 재생 불가능
 const ramdomIcon = document.querySelector('.fas');
@@ -42,7 +41,7 @@ function onYouTubeIframeAPIReady(){
   player = new YT.Player('player', {
     playerVars:{
       'modestbranding' : 1,
-      'list' : kpopListId,
+      'list' : kpoplistId,
       'listType' : "playlist",
       'rel' : 0,
     },
@@ -55,7 +54,7 @@ function onYouTubeIframeAPIReady(){
   popPlayer = new YT.Player('popPlayer', {
     playerVars:{
       'modestbranding' : 1,
-      'list' : popListId,
+      'list' : poplistId,
       'listType' : "playlist",
       'rel' : 0,
     },
@@ -64,6 +63,7 @@ function onYouTubeIframeAPIReady(){
       'onStateChange' : stateChange
       
     }
+    
   })
 }
 
@@ -90,7 +90,7 @@ function ready(e){
 
   Promise.all(promiseList)
     .then(valuse => {
-      if(playlistId == kpopListId) {
+      if(playlistId == kpoplistId) {
         //kpop
         valuse.forEach((snippet, index) => {
           const num = index+1;
@@ -101,14 +101,11 @@ function ready(e){
           const output = `
             <div class="num">${num}</div>
             <div class="title">${title}</div>
-            <div class="playBtn">
-              <div class="play">&#9654</div>
-              <div class="stop">&#9632</div>
-            </div>
+            <div class="play">&#9654</div>
             `
           list.innerHTML = output;
           list.classList.add(videoId);
-          kpopPlayListUl.appendChild(list);
+          kpopPlaylistUl.appendChild(list);
         })
       } else {
         //pop
@@ -121,36 +118,32 @@ function ready(e){
           const output = `
             <div class="popNum">${num}</div>
             <div class="popTitle">${title}</div>
-            <div class="popPlayBtn">
-              <div class="popPlay">&#9654</div>
-              <div class="popStop">&#9632</div>
-            </div>
+            <div class="popPlay">&#9654</div>
             `
           list.innerHTML = output;
           list.classList.add(videoId);
-          popPlayListUl.appendChild(list);
+          popPlaylistUl.appendChild(list);
         })
       }
       
     })
     .then(() => {
       //stop, click play
-      if(playlistId == kpopListId){
+      if(playlistId == kpoplistId){
         //kpop
-        const stopBtn = document.querySelectorAll('.stop');
-        stopBtn.forEach((item) => item.addEventListener('click', stop))
+        const stopBtn = document.querySelector('.stop');
+        stopBtn.addEventListener('click', stop);
 
         const playBtn = document.querySelectorAll('.play');
         playBtn.forEach((item, index) => item.addEventListener('click', () => play(index)))
       } else {
         //pop
-        const stopBtn = document.querySelectorAll('.popStop');
-        stopBtn.forEach((item) => item.addEventListener('click', popStop))
+        const stopBtn = document.querySelector('.popStop');
+        stopBtn.addEventListener('click', popStop);
 
         const playBtn = document.querySelectorAll('.popPlay');
         playBtn.forEach((item, index) => item.addEventListener('click', () => popPlay(index)))
       }
-      
     })
     const stop = () => player.pauseVideo();
     const play = (index) => player.playVideoAt(index);
@@ -161,10 +154,11 @@ function ready(e){
 let check = 0;
 function stateChange(e){
   //playlist click color change
+  const playId = e.target.playerInfo.videoData.video_id;
+  //const playlistId = e.target.playerInfo.playlistId;
   if(e.data == 1){
-    const playId = e.target.playerInfo.videoData.video_id;
-    const list = document.querySelectorAll('.kpopPlayListUl li');
-
+    const list = document.querySelectorAll('kpopPlayListUl li');
+    console.log(list);
     list.forEach(item => {
       const listId = item.className;
       if(playId == listId) {
@@ -177,6 +171,8 @@ function stateChange(e){
     check = 0;
   } else if(e.data == -1) check++;
 
+ 
+
   if(check >= 2) {
     player.playVideoAt(e.target.playerInfo.playlistIndex + 1);
     check = 1; 
@@ -184,5 +180,78 @@ function stateChange(e){
 }
 
 
+/*
+ if(playlistId == kpoplistId){
+    
+
+  } 
+else {
+  if(e.data == 1){
+    const list = document.querySelectorAll('popPlayListUl li');
+
+    list.forEach(item => {
+      const listId = item.className;
+      if(playId == listId) {
+        item.classList.add('choiceLi');
+      } else {
+        item.classList.remove('choiceLi');
+      }
+    })
+    //error
+    check = 0;
+  } else if(e.data == -1) check++;
+}
 
 
+/*
+  function colorChange(item){
+    if(e.data == 1){
+      const playId = e.target.playerInfo.videoData.video_id;
+      const list = document.querySelectorAll(`.${item} li`);
+      console.log(list);
+  
+      list.forEach(item => {
+        const listId = item.className;
+        if(playId == listId) {
+          item.classList.add('choiceLi');
+        } else {
+          item.classList.remove('choiceLi');
+        }
+      })
+      //error
+      check = 0;
+    } else if(e.data == -1) check++;
+  }
+  
+  playlistId == kpoplistId ? colorChange('kpopPlayListUl') : colorChange('popPlayListUl');
+
+
+
+
+
+
+
+const playlistId = e.target.playerInfo.playlistId;
+  let list;
+
+  if(e.data == 1){
+
+    if(playlistId == kpoplistId){
+      list = document.querySelectorAll('.kpopPlayListUl li');
+      console.log(list);
+    } else {
+      list = document.querySelectorAll('.popPlayListUl li');
+    }
+
+    list.forEach(item => {
+      const listId = item.className;
+      if(playId == listId) {
+        item.classList.add('choiceLi');
+      } else {
+        item.classList.remove('choiceLi');
+      }
+    })
+    //error
+    check = 0;
+  } else if(e.data == -1) check++;
+*/

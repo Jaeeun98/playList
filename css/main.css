@@ -25,9 +25,7 @@
 
 .mainNav div:hover {
     background:rgb(255, 255, 255, 0.6);
-    
 }
-
 
 /*kpop*/
 .kpopMain h2, .popMain h2 {
@@ -40,10 +38,16 @@
     text-shadow: 8px 5px 5px #222;
 }
 
-.text .fas {
+.text .stop, .text .popStop {
     margin-left:60px;
     font-size:20px;
     cursor: pointer;
+}
+
+.play, .popPlay {
+    display:inherit;
+    position: absolute;
+    right:0;
 }
 
 .text {
@@ -104,11 +108,7 @@ ul li:hover {
 ul li div {
     padding:0 10px;
 }
-.playBtn, .popPlayBtn {
-    display:inherit;
-    position: absolute;
-    right:0;
-}
+
 
 /*pop*/
 .popMain {
@@ -139,29 +139,12 @@ ul li div {
     .kpopMain h2, .popMain h2 {
         font-size:70px;
     }
-    
 }
 
 @media(max-width:1024px) {
-    .mainNav {
-        display:flex;
-        margin:40px;
-    }
-    .mainNav div {
-        margin-left:15px;
-    }
     .kpopMain h2, .popMain h2 {
         display:none;
     }
-    .playList {
-        margin : 35% 0 0 12.5%;
-    }
-    ul {
-        margin-top:55vw;
-    }
-}
-    
-@media(max-width:850px){
     .main {
         flex-wrap: wrap;
     }
@@ -174,9 +157,9 @@ ul li div {
     .ytb {
         margin:0;
         position: absolute;
-        left:126%;
-        width:50%;
-        height:40%;
+        left:120%;
+        width:60%;
+        height:45%;
     }
     .popYtb {
         left:63%;
@@ -187,7 +170,7 @@ ul li div {
         height:50vh;
     }
     ul {
-
+        margin-top:59vw;
         height:50vh;
     }
     .mainNav {
@@ -195,10 +178,21 @@ ul li div {
     }
 }
 
-@media(max-width:750px){
-    ul {
-        margin-top:45vw;
+@media(max-width:550px){
+    .playList {
+        margin:70% 0 0 12.5%;
     }
 }
+
+@media(max-width:450px){
+    .playList {
+        margin:108% 0 0 12.5%;
+        font-size:11px;
+    }
+    .num, .popNum {
+        display:none;
+    }
+}
+
 
 
