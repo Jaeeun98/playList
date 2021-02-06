@@ -2,14 +2,12 @@ const kpopPlaylistUl = document.querySelector('.kpopPlayListUl');
 const popPlaylistUl = document.querySelector('.popPlayListUl')
 const key = "AIzaSyBJFWmVhHaFhVmTyg7PQPD9EJolH1AX4Vk";
 const kpoplistId = "PLOHoVaTp8R7dfrJW5pumS0iD_dhlXKv17";
-const poplistId = "PLD7SPvDoEddZUrho5ynsBfaI7nqhaNN5c";
-//"PLOHoVaTp8R7d3L_pjuwIa6nRh4tH5nI4x";
-//kpop은 재생 가능, pop은 재생 불가능
+const poplistId = "PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG";
 const ramdomIcon = document.querySelector('.fas');
 
 //api 추가
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/player_api";
+tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -44,6 +42,8 @@ function onYouTubeIframeAPIReady(){
       'list' : kpoplistId,
       'listType' : "playlist",
       'rel' : 0,
+      'origin' : 'http://localhost:8000',
+      'enablejsapi' : 1
     },
     events: {
       'onReady' : ready,
@@ -57,6 +57,8 @@ function onYouTubeIframeAPIReady(){
       'list' : poplistId,
       'listType' : "playlist",
       'rel' : 0,
+      'origin' : 'http://localhost:8000',
+      'enablejsapi' : 1
     },
     events: {
       'onReady' : ready,
