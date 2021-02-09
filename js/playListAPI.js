@@ -1,9 +1,6 @@
-const kpopPlaylistUl = document.querySelector('.kpopPlayListUl');
-const popPlaylistUl = document.querySelector('.popPlayListUl')
 const key = "AIzaSyBJFWmVhHaFhVmTyg7PQPD9EJolH1AX4Vk";
 const kpoplistId = "PLOHoVaTp8R7dfrJW5pumS0iD_dhlXKv17";
 const poplistId = "PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG";
-const ramdomIcon = document.querySelector('.fas');
 
 //api 추가
 var tag = document.createElement('script');
@@ -72,7 +69,6 @@ function onYouTubeIframeAPIReady(){
 //load 중에 함수 호출하면 오류뜸, 준비중일때 세팅
 //kpopReady
 function ready(e){
-  console.log();
   //playlist
   const videoIdArr = e.target.getPlaylist();
   const promiseList = videoIdArr.map(getItem);
@@ -80,20 +76,21 @@ function ready(e){
 
   function getItem(id){
     const videoApi = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${key}` 
-  
+    
     return new Promise(res => {
       fetch(videoApi)
         .then(res => res.json())
-        .then(({ items }) => {
-          res(items[0].snippet);
-        })
+        .then(res => console.log(res));
       })
   }
 
   Promise.all(promiseList)
     .then(valuse => {
+      console.log(valuse);
       if(playlistId == kpoplistId) {
+
         //kpop
+        const kpopPlaylistUl = document.querySelector('.kpopPlayListUl');
         valuse.forEach((snippet, index) => {
           const num = index+1;
           const title = snippet.title;
@@ -111,6 +108,7 @@ function ready(e){
         })
       } else {
         //pop
+        const popPlaylistUl = document.querySelector('.popPlayListUl')
         valuse.forEach((snippet, index) => {
           const num = index+1;
           const title = snippet.title;
