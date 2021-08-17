@@ -20,7 +20,6 @@ function onYouTubeIframeAPIReady(){
       'origin' : 'https://jaeeun98.github.io/playList/',
       'enablejsapi' : 1
     },
-    
   })
 
   popPlayer = new YT.Player('popPlayer', {
@@ -36,7 +35,7 @@ function onYouTubeIframeAPIReady(){
   })
 }
 
-
+onYouTubeIframeAPIReady();
 
 
 
