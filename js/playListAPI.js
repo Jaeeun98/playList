@@ -17,13 +17,10 @@ function onYouTubeIframeAPIReady(){
       'list' : kpoplistId,
       'listType' : "playlist",
       'rel' : 0,
-      'origin' : 'http://localhost:8000',
+      'origin' : 'https://jaeeun98.github.io/playList/',
       'enablejsapi' : 1
     },
-    events: {
-      'onReady' : ready,
-      'onStateChange' : stateChange,
-    }
+    
   })
 
   popPlayer = new YT.Player('popPlayer', {
@@ -32,17 +29,13 @@ function onYouTubeIframeAPIReady(){
       'list' : poplistId,
       'listType' : "playlist",
       'rel' : 0,
-      'origin' : 'http://localhost:8000',
+      'origin' : 'https://jaeeun98.github.io/playList/',
       'enablejsapi' : 1
     },
-    events: {
-      'onReady' : onPlayerReady,
-    }
+    
   })
 }
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
+
 
 
 
