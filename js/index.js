@@ -44,14 +44,3 @@ back[0].addEventListener('click', kpopMove);
 back[1].addEventListener('click', popMove);
 mainNavKpop.addEventListener('click', kpopMainMove);
 mainNavPop.addEventListener('click', popMainMove);
-
-/*
-
-// btn click, move main
-function moveMain (){
-    window.scrollBy({top : loadingBox.offsetHeight, behavior: 'smooth'});
-}
-
-loadingBtn.addEventListener('click', moveMain);
-
-*/
