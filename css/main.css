@@ -42,7 +42,7 @@
     width:40%;
 }
 
-#disqus_thread {
+#disqus_thread, #lv-container {
     width: 80%;
     height: 60vh;
     margin: auto;
@@ -52,13 +52,23 @@
 #disqus_thread::-webkit-scrollbar {
     opacity: 0;
     width:5px
-  }
+}
 #disqus_thread::-webkit-scrollbar-thumb {
    background-color: rgb(150, 150, 150, 0.7);
    border-radius: 5px;
    background-clip:padding-box;
  
-  }
+}
+
+#lv-container::-webkit-scrollbar {
+    opacity: 0;
+    width:5px
+}
+#lv-container::-webkit-scrollbar-thumb {
+    background-color: rgb(150, 150, 150, 0.7);
+    border-radius: 5px;
+    background-clip:padding-box;
+ }
 
 /*video*/
 .ytb {
@@ -105,7 +115,7 @@
         margin:auto;
         width:80%;
     }
-    #disqus_thread {
+    #lv-container, #disqus_thread {
         height: 50vh;
         margin-bottom: 20px;
     }

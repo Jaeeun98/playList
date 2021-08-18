@@ -13,7 +13,20 @@ const back = document.querySelectorAll('.back');
 const mainNavKpop = document.querySelector('.mainNavKpop');
 const mainNavPop = document.querySelector('.mainNavPop');
 
+//kpop comment
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
 
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+
+//pop comment
 (function () {
     var d = document, s = d.createElement('script');
     s.src = 'https://playlist-4.disqus.com/embed.js';
