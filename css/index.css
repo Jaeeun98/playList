@@ -5,7 +5,6 @@ body {
     text-align: center;
     transition: 0.5s ease;
     overflow: hidden;
-    cursor: url("../cursor.png"), auto;
 }
 
 /*loading*/
@@ -85,6 +84,14 @@ h2 {
     text-shadow: 8px 5px 5px #000;
 }
 
+.disqus_thread {
+    width: 80%;
+    height: 60vh;
+    margin: auto;
+    
+    overflow-y: scroll;
+}
+
 
 /*kpop*/
 .kpop, .pop {
@@ -155,16 +162,5 @@ h2 {
     .btnDiv p {
         font-size:5vmax;
     }
-    
 }
 
-/*360*/
-
-
-ul {
-    color:#fff;
-}
-
-ul li {
-    display: flex;
-}

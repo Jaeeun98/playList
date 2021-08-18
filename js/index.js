@@ -13,6 +13,14 @@ const back = document.querySelectorAll('.back');
 const mainNavKpop = document.querySelector('.mainNavKpop');
 const mainNavPop = document.querySelector('.mainNavPop');
 
+
+(function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://playlist-4.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+
 //loading icon 
 window.onload = function(){ 
     setTimeout(() => {
@@ -23,7 +31,6 @@ window.onload = function(){
         body.style.transform = "translateY(-100%)";
     }, 6000);
 };
-
 
 //nav
 const kpopMove = () => body.style.transform = "translateY(-100%)";
