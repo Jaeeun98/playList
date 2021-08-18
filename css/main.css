@@ -98,9 +98,18 @@
 }
 
 @media(max-width:1200px) {
+    .kpopMain, .popMain {
+        padding:20px;
+    }
     .kpopMain h2, .popMain h2 {
         font-size:70px;
         margin-bottom: 60px;
+    }
+    .text {
+        width:50%;
+    }
+    #lv-container, #disqus_thread {
+        height: 50vh;
     }
 }
 
@@ -115,11 +124,6 @@
         margin:auto;
         width:80%;
     }
-    #lv-container, #disqus_thread {
-        height: 50vh;
-        margin-bottom: 20px;
-    }
-
     #player, #popPlayer {
         width: 100%;
     }
