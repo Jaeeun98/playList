@@ -16,7 +16,7 @@ body {
     justify-content: center;
 }
 
-.xmasText {
+.logoText {
     color:#f1f1f1;
     font-family: 'Dancing Script', cursive;
     font-size:3vmax;
@@ -84,15 +84,6 @@ h2 {
     text-shadow: 8px 5px 5px #000;
 }
 
-.disqus_thread {
-    width: 80%;
-    height: 60vh;
-    margin: auto;
-    
-    overflow-y: scroll;
-}
-
-
 /*kpop*/
 .kpop, .pop {
     display: flex;
@@ -137,7 +128,7 @@ h2 {
     .fa-gifts {
         font-size : 10vmax;
     }
-    .xmasText {
+    .logoText {
         font-size : 4vmax;
     }
     h2 {
